@@ -9,12 +9,6 @@ import random
 from new_sentiment import *
 from topic import get_topic
 
-# name - Drew Montooth
-# age - 13
-# program name - real time object detector
-# programming language - python
-# platform - Visual Studio Code
-
 
 ###############################################################################################################
 # RTOD
