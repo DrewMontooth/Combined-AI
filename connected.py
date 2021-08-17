@@ -24,8 +24,8 @@ with open(classesDir, "r") as f:
     classNames = f.read().split("\n")
 
 
-# model_cfg, model_weights = 'C:/Users/DrewM/OneDrive/Documents/Code/Object_Detection/yolov3.cfg', 'C:/Users/DrewM/OneDrive/Documents/Code/Object_Detection/yolov3.weights'
-tiny_cfg, tiny_weights = 'C:/Users/DrewM/OneDrive/Documents/Code/Object_Detection/yolov3-tiny.cfg', 'C:/Users/DrewM/OneDrive/Documents/Code/Object_Detection/yolov3-tiny.weights'
+# model_cfg, model_weights = 'Object_Detection/yolov3.cfg', 'Object_Detection/yolov3.weights'
+tiny_cfg, tiny_weights = 'Object_Detection/yolov3-tiny.cfg', 'Object_Detection/yolov3-tiny.weights'
 
 net = cv2.dnn.readNetFromDarknet(tiny_cfg, tiny_weights)
 
@@ -100,7 +100,7 @@ names_places = list(set(names_places))
 # Thought
 ###############################################################################################################
 
-base_text = open('Smart_AI/thought_base.txt', 'r').read()
+base_text = open('thought_base.txt', 'r').read()
 
 happiness = 0
 happiness_dataset = {
@@ -140,7 +140,7 @@ def run():
     if sent == "You're so much" or sent == "You're so much ":
         return None
 
-    with open('NLP/wrong_answers.txt', 'r') as f:
+    with open('wrong_answers.txt', 'r') as f:
         if sent in list(f.read().split('\n')):
             return None
         else:
